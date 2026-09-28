@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: grabfood-cache-demo
+
+  data:
+    redis:
+      host: localhost          # Redis chạy local hoặc Docker
+      port: 6379               # Cổng mặc định Redis
+      timeout: 2000ms          # Timeout kết nối
+      lettuce:
+        pool:
+          max-active: 10       # Số kết nối tối đa trong pool
+          max-idle: 5          # Số kết nối idle tối đa
+          min-idle: 1          # Số kết nối idle tối thiểu
+          max-wait: -1ms       # Chờ không giới hạn khi pool đầy
